@@ -1,0 +1,158 @@
+<html>
+
+<head>
+    <title>ProScroll.js</title>
+    <link rel="icon" href="Logo.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="The simplest JavaScript library to easily change text colors">
+    <meta name="keywords" content="JavaScript, Colors, Easiest">
+    <meta name="author" content="Arnav Gumber">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:title" property="og:title" content="Rainbow.js - The easiest way to change the color of the text">
+    <style>
+        #title {
+            font-size: 350%;
+            color: silver;
+            text-shadow: 2px 2px 1px black, -2px -2px 1px black;
+        }
+
+        #use,
+        #what,
+        #attr,
+        #attrname,
+        #demo {
+            font-size: 250%;
+            margin-left: 2%;
+            font-style: italic;
+            max-width: 75%;
+        }
+
+        #add,
+        #do {
+            font-size: 175%;
+            margin-left: 4%;
+            font-variant: small-caps;
+        }
+
+        #logoImg {
+            height: auto;
+            width: 40%;
+            float: right;
+            padding-right: 30px;
+        }
+
+        #code {
+            font-size: 110%;
+            font-stretch: extra-expanded;
+            margin-left: 10%;
+        }
+
+        #copyBtn {
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            padding: 0 10px 0 10px;
+            font-size: 150%;
+            cursor: pointer;
+        }
+
+        #done {
+            font-size: 150%;
+            font-style: oblique;
+            margin-left: 5%;
+        }
+
+        #example,
+        #output {
+            font-size: 200%;
+            margin-left: 3%;
+        }
+
+        #supcol {
+            margin-left: 5%;
+            width: 90%;
+            font-size: 125%;
+        }
+
+        ul {
+            font-size: 175%;
+            margin-left: 10%;
+        }
+
+        ol {
+            zoom: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="Logo.png" alt="Logo" height="70px" width="70px" style="position: absolute;">
+    <center>
+        <p id="title">ProScroll<i>.js</i></p>
+    </center>
+    <hr style="width: 75%;">
+    <img src="Logo.png" alt="Logo" id="logoImg">
+    <p id="use">How to use:</p>
+    <p id="add">Just add the following code after ending the &#60;body&#62; tag -</p>
+    <input type="text" id="code" value="<script src='https://arnavgumber.github.io/proscroll/proscroll.js'></script>">
+    <button id="copyBtn" onclick="copyText()">Copy</button>
+    <br>
+    <p id="done">And you are done</p>
+    <br>
+    <p id="what">What it does:</p>
+    <p id="do">It has some built-in attributes which can change the scrollbar of your website and give it a beautiful
+        look<br>You can use it by adding some attributes in the &#60;body&#62; tag</p>
+    <br>
+    <p id="attr">Attributes:</p>
+    <ol>
+        <li>
+            <p id="attrname"><b>psw</b><br>psw attribute is used to change the width of the scrollbar.<br>Example:
+                <kbd>&#60;body psw="15"&#62;</kbd> <sub>makes the width of the scrollbar 15 pixels</sub>
+            </p>
+        </li>
+        <li>
+            <p id="attrname"><b>pscol</b><br>pscol attribute is used to change the color of the scrollbar.<br>Example:
+                <kbd>&#60;body pscol="blue"&#62;</kbd> <sub>makes the color of the scrollbar blue</sub>
+            </p>
+        </li>
+        <li>
+            <p id="attrname"><b>psbg</b><br>pscol attribute is used to change the background-color of the
+                scrollbar.<br>Example:
+                <kbd>&#60;body psbg="red"&#62;</kbd> <sub>makes the background-color of the scrollbar red</sub>
+            </p>
+        </li>
+        <li>
+            <p id="attrname"><b>psround</b><br>psround attribute is used to make the borders of the scrollbar
+                round<br>Example:
+                <kbd>&#60;body psround="true"&#62;</kbd> <sub>makes all the borders of the scrollbar round</sub>
+            </p>
+        </li>
+        <li>
+            <p id="attrname"><b>pstemp</b><br>pstemp attribute is used when you want to start from a built-in template,
+                you can
+                also add your own styles to a built-in template.<br>Templates:
+            <ul>
+                <li>youtube</li>
+                <li>default</li>
+                <li>dark</li>
+            </ul>
+            </p>
+        </li>
+    </ol>
+
+    <p id="demo"><a href="test.html">See demo</a></p>
+</body>
+<script src="https://arnavgumber.github.io/rainbowjs/rainbow.js"></script>
+<script>
+    function copyText() {
+        let code = document.getElementById("code");
+        code.select();
+        document.execCommand("copy");
+        document.getElementById("copyBtn").innerHTML = "Copied";
+        setInterval(function () {
+            document.getElementById("copyBtn").innerHTML = "Copy";
+        }, 10000);
+    }
+</script>
+
+</html>
